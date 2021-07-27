@@ -1,13 +1,14 @@
 <h1>Tasks#index</h1>
-
-<ul>
-  <% @tasks.each do |task| %>
-    <li>
-      <%= task.completed %>
-      <%= link_to task.title, task_path(task.id) %>
-    </li>
-  <% end %>
-</ul>
+<div class="containers">
+  <ul>
+    <% @tasks.each do |task| %>
+      <li>
+        <%= task.completed %>
+        <%= link_to task.title, task_path(task.id) %>
+      </li>
+    <% end %>
+  </ul>
+</div>
 
 
 <%= link_to "Create a Task", new_task_path %>

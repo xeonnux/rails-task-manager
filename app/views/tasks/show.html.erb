@@ -1,15 +1,16 @@
 <h1>
   <%= @task.title %>
 </h1>
-
-<p>
-  details: <%= @task.details %>
-</p>
+<div class="containers">
+  <p>
+    details: <%= @task.details %>
+  </p>
+</div>
 <ul>
-  <li class="button">
+  <li class="btn btn-primary">
     <%= link_to "Update task", edit_task_path %>
   </li>
-  <li class="button">
+  <li class="btn btn-primary">
     <%= link_to "Delete task", task_path(@task), method: :delete, data: { confirm: "Are you sure?" } %>
   </li>
 </ul>
